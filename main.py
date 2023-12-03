@@ -12,16 +12,22 @@ from discord_webhook import DiscordWebhook
 from data import data
 client = data()
 
+#Status
 if client.grind:
 	client.grind_status = '✅'
 if client.coinflip or client.slot:
 	client.benefit_status = '✅'
 
+#Time
+def at():
+	return f'\033[104m{time.strftime("%H:%M:%S", time.localtime())}\033[0m'
+
+#Intro
 system('cls')
 print("{}█▀█ █ █ ▄▀█ █▄ █ █▀▄ ▄▀█ ▀█▀".format(client.color.blue, client.color.reset))
 print("{}█▀▀ █▀█ █▀█ █ ▀█ █▄▀ █▀█  █".format(client.color.blue, client.color.reset))
 
-#logged
+#Log In
 bot = discum.Client(token=client.token, log=False)
 @bot.gateway.command
 def on_ready(resp):
@@ -29,17 +35,13 @@ def on_ready(resp):
 		user = bot.gateway.session.user
 		print("{}Logged in as{} {}".format(client.color.red, client.color.reset, user['username']))
 
-#time
-def at():
-	return f'\033[104m{time.strftime("%H:%M:%S", time.localtime())}\033[0m'
-
-#webhook
+#Webhook
 def webhookPing(message: str) -> None:
 	if client.webhook:
 		webhook = DiscordWebhook(url = client.webhook, content=message)
 		webhook = webhook.execute()
 
-#captcha bypass
+#Captcha Bypass
 @bot.gateway.command
 def check(resp):
 	if resp.event.message:
@@ -63,55 +65,61 @@ def check(resp):
 				if 'don\'t have enough cowoncy!' in m['content']:
 					client.stopped = True
 
-#coinflip check
+#Coinflip Check
 @bot.gateway.command
 def cfcheck(resp):
 	if not client.stopped and client.coinflip:
 		if resp.event.message_updated:
 			m = resp.parsed.auto()
-			if m['channel_id'] == client.channel:
-				if m['author']['id'] == client.OwOID:
-						if 'you lost' in m['content']:
-							print("{} {}[INFO] Coinflip Lost {} Cowoncy{}".format(at(), client.color.red, client.current_cfbet, client.color.reset))
-							client.benefit_amount -= client.current_cfbet
-							client.current_cfbet *= client.cfrate
-						if 'you won' in m['content']:
-							print("{} {}[INFO] Coinflip Won {} Cowoncy{}".format(at(), client.color.green, client.current_cfbet, client.color.reset))
-							client.benefit_amount += client.current_cfbet
-							client.current_cfbet = client.cfbet
+			try:
+				if m['channel_id'] == client.channel:
+					if m['author']['id'] == client.OwOID:
+							if 'you lost' in m['content']:
+								print("{} {}[INFO] Coinflip Lost {} Cowoncy{}".format(at(), client.color.red, client.current_cfbet, client.color.reset))
+								client.benefit_amount -= client.current_cfbet
+								client.current_cfbet *= client.cfrate
+							if 'you won' in m['content']:
+								print("{} {}[INFO] Coinflip Won {} Cowoncy{}".format(at(), client.color.green, client.current_cfbet, client.color.reset))
+								client.benefit_amount += client.current_cfbet
+								client.current_cfbet = client.cfbet
+			except KeyError:
+				pass
 
-#slot check
+#Slot Check
 @bot.gateway.command
 def scheck(resp):
 	if not client.stopped and client.slot:
 		if resp.event.message_updated:
 			m = resp.parsed.auto()
-			if m['channel_id'] == client.channel:
-				if m['author']['id'] == client.OwOID:
-						if 'won nothing' in m['content']:
-							print("{} {}[INFO] Slot Lost {} Cowoncy{}".format(at(), client.color.red, client.current_sbet, client.color.reset))
-							client.benefit_amount -= client.current_sbet
-							client.current_sbet *= client.srate
-						if '<:eggplant:417475705719226369> <:eggplant:417475705719226369> <:eggplant:417475705719226369>' in m['content']:
-							print("{} {}[INFO] Slot Draw{}".format(at(), client.color.bold, client.color.reset))
-						if '<:heart:417475705899712522> <:heart:417475705899712522> <:heart:417475705899712522>' in m['content']:
-							print("{} {}[INFO] Slot Won {} Cowoncy{}".format(at(), client.color.green, client.current_sbet, client.color.reset))
-							client.benefit_amount += client.current_sbet
-							client.current_sbet = client.sbet
-						if '<:cherry:417475705178161162> <:cherry:417475705178161162> <:cherry:417475705178161162>' in m['content']:
-							print("{} {}[INFO] Slot Won {} Cowoncy{}".format(at(), client.color.green, client.current_sbet * 2, client.color.reset))
-							client.benefit_amount += client.current_sbet * 2
-							client.current_sbet = client.sbet
-						if '<:cowoncy:417475705912426496> <:cowoncy:417475705912426496> <:cowoncy:417475705912426496>' in m['content']:
-							print("{} {}[INFO] Slot Won {} Cowoncy{}".format(at(), client.color.green, client.current_sbet * 3, client.color.reset))
-							client.benefit_amount += client.current_sbet * 3
-							client.current_sbet = client.sbet
-						if '<:o_:417475705899843604> <:w_:417475705920684053> <:o_:417475705899843604>' in m['content']:
-							print("{} {}[INFO] Slot Won {} Cowoncy{}".format(at(), client.color.green, client.current_sbet * 9, client.color.reset))
-							client.benefit_amount += client.current_sbet * 9
-							client.current_sbet = client.sbet
+			try:
+				if m['channel_id'] == client.channel:
+					if m['author']['id'] == client.OwOID:
+							if 'won nothing' in m['content']:
+								print("{} {}[INFO] Slot Lost {} Cowoncy{}".format(at(), client.color.red, client.current_sbet, client.color.reset))
+								client.benefit_amount -= client.current_sbet
+								client.current_sbet *= client.srate
+							if '<:eggplant:417475705719226369> <:eggplant:417475705719226369> <:eggplant:417475705719226369>' in m['content']:
+								print("{} {}[INFO] Slot Draw{}".format(at(), client.color.bold, client.color.reset))
+							if '<:heart:417475705899712522> <:heart:417475705899712522> <:heart:417475705899712522>' in m['content']:
+								print("{} {}[INFO] Slot Won {} Cowoncy (x2){}".format(at(), client.color.green, client.current_sbet, client.color.reset))
+								client.benefit_amount += client.current_sbet
+								client.current_sbet = client.sbet
+							if '<:cherry:417475705178161162> <:cherry:417475705178161162> <:cherry:417475705178161162>' in m['content']:
+								print("{} {}[INFO] Slot Won {} Cowoncy (x3){}".format(at(), client.color.green, client.current_sbet * 2, client.color.reset))
+								client.benefit_amount += client.current_sbet * 2
+								client.current_sbet = client.sbet
+							if '<:cowoncy:417475705912426496> <:cowoncy:417475705912426496> <:cowoncy:417475705912426496>' in m['content']:
+								print("{} {}[INFO] Slot Won {} Cowoncy (x4){}".format(at(), client.color.green, client.current_sbet * 3, client.color.reset))
+								client.benefit_amount += client.current_sbet * 3
+								client.current_sbet = client.sbet
+							if '<:o_:417475705899843604> <:w_:417475705920684053> <:o_:417475705899843604>' in m['content']:
+								print("{} {}[INFO] Slot Won {} Cowoncy (x10){}".format(at(), client.color.green, client.current_sbet * 9, client.color.reset))
+								client.benefit_amount += client.current_sbet * 9
+								client.current_sbet = client.sbet
+			except KeyError:
+				pass
 
-#grind
+#Grind
 def grind():
 	if not client.stopped and client.grind:
 		bot.typingAction(client.channel)
@@ -127,7 +135,7 @@ def grind():
 		print("{} {}[SENT] owob{}".format(at(), client.color.yellow, client.color.reset))
 		client.grind_amount += 1
 		
-#coinflip
+#Coinflip
 def cf():
 	if client.current_cfbet  > 250000:
 		client.current_cfbet = client.cfbet
@@ -138,7 +146,7 @@ def cf():
 		print("{} {}[SENT] owo cf {} {}{}".format(at(), client.color.yellow, client.current_cfbet, choice, client.color.reset))
 		sleep(random.randint(1, 2))
 
-#slot
+#Slot
 def s():
 	if client.current_sbet  > 250000:
 		client.current_sbet = client.sbet
@@ -148,9 +156,10 @@ def s():
 		print("{} {}[SENT] owo s {}{}".format(at(), client.color.yellow,client.current_sbet,client.color.reset))
 		sleep(random.randint(1, 2))
 
-#run
+#Run
 @bot.gateway.command
 def loop(resp):
+	farm = 0
 	if resp.event.ready:
 		while True:
 			if client.stopped:
@@ -160,10 +169,10 @@ def loop(resp):
 				sleep(random.randint(3, 5))
 				cf()
 				s()
-				sleep(random.randint(10, 15))
+				sleep(random.randint(5, 10))
 bot.gateway.run()
 
-#exit
+#Exit
 @atexit.register
 def exit():
 	startfile('music.mp3')
@@ -176,7 +185,7 @@ def exit():
 	print("{}█▄▄ █▀█ █▀▀  █  █▄▄ █▀█ █▀█{}".format(client.color.red, client.color.reset))
 	print()
 	print(tabulate(stat, headers="firstrow", tablefmt="simple"))
-	print('{}{}'.format(at(), client.color.reset))
+	print()
 	input("{}Enter 3 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 2 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 1 Times to Restart{}".format(client.color.blue, client.color.reset))
