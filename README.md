@@ -9,7 +9,7 @@ Do you want new feature?
 
 ## ⭐・Star History
 <h2 align="center">Goal: <a href="https://github.com/phandat1405/OwO/stargazers"><img src="https://img.shields.io/github/stars/phandat1405/OwO" /></a> / 512</h2>
-⭐⭐⭐ You can also give this repository a star to show more people and they can use this repository<br>
+⭐⭐⭐ You can also give this repository a star to show more people and they can use this repository
 
 [![Star History Chart](https://api.star-history.com/svg?repos=phandat1405/OwO&type=Date)](https://star-history.com/#phandat1405/OwO&Date)
 
