@@ -1,14 +1,6 @@
-<meta name="description" content="This is Owo auto farm version designed by Phandat"/>
-
-<meta name="keywords" content="Phandat, OwO, Gamble OwO, Farm OwO, Auto Farm OwO, Auto Grind OwO, Tool OwO, Macro OwO, Captcha bypass OwO"/>
-
-<meta name="author" content="Phandat1405"/>
-<meta name="url" content="https://github.com/phandat1405/OwO" />
-<meta name="og:title" content="OwO; Auto Farm OwO"/>
-<meta name="google-site-verification" content="premium best" />
-<meta name="og:url" content="https://github.com/phandat1405/OwO" />
-<meta name="og:image" content="https://i.imgur.com/85PNo2N.png" />
-<meta name="og:description" content="Simplest automation autocatcher and Hack for Poketwo with Market Commands and Poketwo Guide and it is Best and Poketwo command with automation. This bot or selfbot automatically catches Pokemon known as Autocatch on Discord. Several other Features to Easily Get Rich in Poketwo."/>
+<a href="https://github.com/Mid0aria/owofarmbot"></a>
+<a <img src="https://hits.sh/github.com/Mid0aria/owofarmbot.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
+<a href="https://github.com/Mid0aria/owofarmbot"><img src="https://img.shields.io/github/last-commit/mid0aria/owofarmbot" /></a><br>
 
 # Demo
 ![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
