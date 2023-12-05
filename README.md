@@ -12,6 +12,30 @@
 
 [![Star History Chart](https://api.star-history.com/svg?repos=phandat1405/OwO&type=Date)](https://star-history.com/#phandat1405/OwO&Date)
 
+## 👑・Features
+
+-   Auto Farm
+    -   Auto Hunt
+    -   Auto Battle
+    -   Auto Say OwO
+-   Auto Gamble
+    -   Auto Coinflip
+    -   Auto Slot
+    -   Custom Bet
+    -   Multiply When Lose
+-   Auto Animals Sell OR Sacrifice,
+-   Auto Upgrade Autohunt
+-   Auto Pray
+-   Auto CheckList (beta)
+    -   Auto Quest
+    -   Auto Daily
+    -   Auto Cookie
+-   Captcha(Ban) Protection v0.1.8 (beta)
+-   Discord-RPC
+-   **Extra Token**
+    -   All Main Token Features
+    -   Auto Pray for Main Token
+    -   
 # Demo
 ![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
 
