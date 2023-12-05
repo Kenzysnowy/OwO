@@ -15,6 +15,8 @@ client = data()
 #Status
 if client.grind:
 	client.grind_status = '✅'
+if client.pray:
+	client.pray_status = '✅'
 if client.coinflip or client.slot:
 	client.benefit_status = '✅'
 
@@ -139,6 +141,15 @@ def grind():
 		bot.sendMessage(str(client.channel), "owob")
 		print("{} {}[SENT] owob{}".format(at(), client.color.yellow, client.color.reset))
 		client.grind_amount += 1
+
+#Pray
+def pray():
+	if not client.stopped and client.grind:
+		bot.typingAction(client.channel)
+		bot.sendMessage(str(client.channel), "owopray")
+		print("{} {}[SENT] owopray{}".format(at(), client.color.yellow, client.color.reset))
+		sleep(random.randint(1, 2))
+		client.pray_amount += 1
 		
 #Coinflip
 def coinflip():
@@ -166,6 +177,7 @@ def slot():
 def loop(resp):
 	uwu = 0
 	farm = 0
+	praytime = 0
 	cf = 0
 	s = 0
 	if resp.event.ready:
@@ -179,6 +191,9 @@ def loop(resp):
 				if time() - farm > random.randint(15, 20):
 						grind()
 						farm=time()
+				if time() - praytime > random.randint(300, 400):
+						pray()
+						praytime=time()
 				if time() - cf > random.randint(15, 20):
 						coinflip()
 						cf=time()
