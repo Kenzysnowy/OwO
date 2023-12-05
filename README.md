@@ -4,12 +4,11 @@
   
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
-Do you want new feature?
+⭐ Give this repository a star for new feature ⭐
 </p>
 
 ## ⭐・Star History
-<h2 align="center">Goal: <a href="https://github.com/phandat1405/OwO/stargazers"><img src="https://img.shields.io/github/stars/phandat1405/OwO" /></a> / 512</h2>
-⭐⭐⭐ You can also give this repository a star to show more people and they can use this repository
+<h2 align="center">Goal: <a href="https://github.com/phandat1405/OwO/stargazers"><img src="https://img.shields.io/github/stars/phandat1405/OwO" /></a> / 1000</h2>
 
 [![Star History Chart](https://api.star-history.com/svg?repos=phandat1405/OwO&type=Date)](https://star-history.com/#phandat1405/OwO&Date)
 
