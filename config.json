@@ -2,6 +2,7 @@
   "token": "none",
   "channel": "none",
   "grind": true,
+  "pray": true,
   "coinflip": true,
   "cfbet": 3,
   "cfrate": 2,
