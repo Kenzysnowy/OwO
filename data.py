@@ -6,6 +6,7 @@ class data:
 			self.token = data["token"]
 			self.channel = data["channel"]
 			self.grind = data["grind"]
+			self.pray = data["pray"]
 			self.coinflip = data["coinflip"]
 			self.cfbet = int(data["cfbet"])
 			self.cfrate = int(data["cfrate"])
@@ -18,6 +19,8 @@ class data:
 			self.stopped = False
 			self.grind_amount = 0
 			self.grind_status = '❌'
+			self.pray_amount = 0
+			self.pray_status = '❌'
 			self.benefit_amount = 0
 			self.benefit_status = '❌'
 			self.current_cfbet = self.cfbet
