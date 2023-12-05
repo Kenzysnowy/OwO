@@ -33,77 +33,19 @@
 
 ```
 {
-    "settings": {
-        "huntandbattle": "", true or false
-        "banbypass": "", true or false
-        "discordrpc": "", true or false
-        "pray": "", true or false
-        "extratoken": "", true or false
-        "autoquest": "", true or false
-        "inventory": {
-            "inventorycheck": "", true or false
-            "gemcheck": "", true or false
-            "lootboxcheck": "", true or false
-            "fabledlootboxcheck": "", true or false
-            "cratecheck": "", true or false
-            "eventcheck": "" true or false
-        },
-        "animals": {
-            "enable": "", true or false
-            "type": "" sell or sacrifice
-            "ifsacrifice": {
-                "common": "", true or false
-                "uncommon": "", true or false
-                "rare": "", true or false
-                "epic": "", true or false
-                "mythical": "", true or false
-                "patreon": "", true or false
-                "cpatreon": "", true or false
-                "legendary": "", true or false
-                "gem": "", true or false
-                "bot": "", true or false
-                "distorted": "", true or false
-                "fabled": "", true or false
-                "special": "", true or false
-                "hidden": "" true or false
-            }
-        },
-        "upgradeautohunt": {
-            "enable": "", true or false
-            "type": "" efficiency, duration, cost, gain, exp or radar
-        },
-        "gamble": {
-            "coinflip": {
-                "default_amount"= , Enter the amount you want to start from
-                "max_amount": 250000, Enter the amount where the bot will not bet more than that
-                "multipler": , Enter a number by which the lost amount will be multipled by
-                "enable": "", true or false
-                "amount": "1"
-            },
-            "slots": {
-                "enable": "", true or false
-                "amount": "1"
-            }
-        }
-    },
-    "main":{
-        "token":"", main token (if you use replit please edit .env file)
-        "userid":"", token user id
-        "channelid":"", channel id for main token
-        "owodmchannelid":"", owo bot dm channel id
-        "gamblechannelid":"", channel if for gambling
-        "autoquestchannelid":"" auto quest channel id
-    },
-    "extra":{
-        "token":"", extra token (if you use replit please edit .env file)
-        "userid":"", extra token user id
-        "channelid":"", channel id for extra token
-        "gamblechannelid":"", channel if for gambling
-        "owodmchannelid":"" extra token owo bot dm channel id
-    }
+  "token": "", your token
+  "channel": "", channel id
+  "grind": "", true or false
+  "pray": "", true or false
+  "coinflip": "", true or false
+  "cfbet": "", the coinflip bet you want to start
+  "cfrate": "", the coinflip rate you want to multiply
+  "slot": "", true or false
+  "sbet": "", the slot bet you want to start
+  "srate": "", the slot rate you want to multiply
+  "webhook": "", 
+  "ping": ""
 }
-
-
 ```
 
 
