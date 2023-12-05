@@ -2,10 +2,10 @@
 from colorama import init
 init()
 import time
+from time import sleep, strftime, localtime, time
 import random
 import atexit
 from os import  system, startfile
-from time import sleep
 from tabulate import tabulate
 import discum
 from discord_webhook import DiscordWebhook
@@ -19,8 +19,8 @@ if client.coinflip or client.slot:
 	client.benefit_status = '✅'
 
 #Time
-def at():
-	return f'\033[104m{time.strftime("%H:%M:%S", time.localtime())}\033[0m'
+def at() -> str:
+	return f'\033[104m{strftime("%H:%M:%S", localtime())}\033[0m'
 
 #Intro
 system('cls')
@@ -119,13 +119,18 @@ def scheck(resp):
 			except KeyError:
 				pass
 
-#Grind
-def grind():
+#OwO
+def owo():
 	if not client.stopped and client.grind:
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo")
 		print("{} {}[SENT] owo{}".format(at(), client.color.yellow, client.color.reset))
 		sleep(random.randint(1, 2))
+		client.grind_amount += 1
+
+#Grind
+def grind():
+	if not client.stopped and client.grind:
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owoh")
 		print("{} {}[SENT] owoh{}".format(at(), client.color.yellow, client.color.reset))
@@ -136,7 +141,7 @@ def grind():
 		client.grind_amount += 1
 		
 #Coinflip
-def cf():
+def coinflip():
 	if client.current_cfbet  > 250000:
 		client.current_cfbet = client.cfbet
 	if not client.stopped and client.coinflip:
@@ -147,7 +152,7 @@ def cf():
 		sleep(random.randint(1, 2))
 
 #Slot
-def s():
+def slot():
 	if client.current_sbet  > 250000:
 		client.current_sbet = client.sbet
 	if not client.stopped and client.slot:
@@ -159,17 +164,27 @@ def s():
 #Run
 @bot.gateway.command
 def loop(resp):
+	uwu = 0
 	farm = 0
+	cf = 0
+	s = 0
 	if resp.event.ready:
 		while True:
 			if client.stopped:
 				bot.gateway.close()
 			if not client.stopped:
-				grind()
-				sleep(random.randint(3, 5))
-				cf()
-				s()
-				sleep(random.randint(5, 10))
+				if time() - uwu > random.randint(10, 15):
+						owo()
+						uwu=time()
+				if time() - farm > random.randint(15, 20):
+						grind()
+						farm=time()
+				if time() - cf > random.randint(15, 20):
+						coinflip()
+						cf=time()
+				if time() - s > random.randint(15, 20):
+						slot()
+						s=time()	
 bot.gateway.run()
 
 #Exit
