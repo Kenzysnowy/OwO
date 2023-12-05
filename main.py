@@ -209,6 +209,7 @@ def exit():
 	client.stopped = True
 	stat = [['🐮', 'AMOUNT','STATUS'],
 	['🎯', (client.grind_amount), (client.grind_status)],
+	['🙏', (client.pray_amount), (client.pray_status)],
 	['💵', (client.benefit_amount), (client.benefit_status)],]
 	webhookPing(f"**<a:Bar:1065047410809770014> chà có sự cố ở <#{client.channel}> <@{client.ping}> kìa <a:PepeHack:1065047722199089222>**")
 	print("{}█▀▀ ▄▀█ █▀█ ▀█▀ █▀▀ █ █ ▄▀█{}".format(client.color.red, client.color.reset))
