@@ -15,8 +15,6 @@ client = data()
 #Status
 if client.grind:
 	client.grind_status = '✅'
-if client.pray:
-	client.pray_status = '✅'
 if client.coinflip or client.slot:
 	client.benefit_status = '✅'
 
@@ -121,18 +119,13 @@ def scheck(resp):
 			except KeyError:
 				pass
 
-#OwO
-def owo():
+#Grind
+def grind():
 	if not client.stopped and client.grind:
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo")
 		print("{} {}[SENT] owo{}".format(at(), client.color.yellow, client.color.reset))
 		sleep(random.randint(1, 2))
-		client.grind_amount += 1
-
-#Grind
-def grind():
-	if not client.stopped and client.grind:
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owoh")
 		print("{} {}[SENT] owoh{}".format(at(), client.color.yellow, client.color.reset))
@@ -175,31 +168,16 @@ def slot():
 #Run
 @bot.gateway.command
 def loop(resp):
-	uwu = 0
-	farm = 0
-	praytime = 0
-	cf = 0
-	s = 0
-	while True:
-		if resp.event.ready:
+	if resp.event.ready:
+		while True:
 			if client.stopped:
 				bot.gateway.close()
 			if not client.stopped:
-				if time() - uwu > random.randint(10, 15):
-						owo()
-						uwu=time()
-				if time() - farm > random.randint(15, 20):
 						grind()
-						farm=time()
-				if time() - praytime > random.randint(300, 400):
-						pray()
-						praytime=time()
-				if time() - cf > random.randint(15, 20):
+						sleep(random.randint(3, 5))
 						coinflip()
-						cf=time()
-				if time() - s > random.randint(15, 20):
 						slot()
-						s=time()	
+						sleep(random.randint(10, 15))
 bot.gateway.run()
 
 #Exit
@@ -209,7 +187,6 @@ def exit():
 	client.stopped = True
 	stat = [['🐮', 'AMOUNT','STATUS'],
 	['🎯', (client.grind_amount), (client.grind_status)],
-	['🙏', (client.pray_amount), (client.pray_status)],
 	['💵', (client.benefit_amount), (client.benefit_status)],]
 	webhookPing(f"**<a:Bar:1065047410809770014> chà có sự cố ở <#{client.channel}> <@{client.ping}> kìa <a:PepeHack:1065047722199089222>**")
 	print("{}█▀▀ ▄▀█ █▀█ ▀█▀ █▀▀ █ █ ▄▀█{}".format(client.color.red, client.color.reset))

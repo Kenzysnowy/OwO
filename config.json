@@ -2,13 +2,12 @@
   "token": "none",
   "channel": "none",
   "grind": true,
-  "pray": true,
   "coinflip": true,
-  "cfbet": 3,
-  "cfrate": 2,
+  "cfbet": "3",
+  "cfrate": "2",
   "slot": true,
-  "sbet": 3,
-  "srate": 2,
+  "sbet": "3",
+  "srate": "2",
   "webhook": "none",
   "ping": "none"
 }
