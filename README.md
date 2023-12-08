@@ -52,6 +52,7 @@
 ## 📡・Usage
 ### Pc or Laptop 💻
 Download and install [Python](https://www.python.org/downloads)
+
 Go to cmd file and type:
 ```
 pip install -r requirements.txt
