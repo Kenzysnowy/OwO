@@ -46,31 +46,40 @@
 ## 📡・Usage
 ### Pc or Laptop 💻
 Download and install [Python](https://www.python.org/downloads)
-go to cmd file and type:
+Go to cmd file and type:
 ```
 pip install -r requirements.txt
 ```
-edit config.json or type:
+Edit `config.json` or type:
 ```
 python setting.py
 ```
-start run.cmd or type:
+Start `run.cmd` or type:
 ```
 python main.py
 ```
 
-[Termux](https://f-droid.org/packages/com.termux)
-
 ### Termux
+Download and install [Termux](https://f-droid.org/packages/com.termux)
+Open termux app and type:
+
+```
 pkg update
 pkg upgrade
 pkg install git
 pkg install python
+```
+```
 git clone https://github.com/phandat1405/OwO.git
 cd OwO
 pip install -r requirements.txt
+```
+```
 python setting.py
+```
+```
 python main.py
+```
 
 ## 🎯・Demo
 ![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
