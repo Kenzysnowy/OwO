@@ -4,6 +4,7 @@
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
 </p>
+
 [⭐・Star History](#star-history)<br>
 [🔮・Features](#features)<br>
 [⚙・Config.json](#configjson)<br>
