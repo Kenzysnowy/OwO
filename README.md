@@ -1,7 +1,6 @@
-<h1 align="center">OwO Farm </h1>
-
+<h1 align="center">🐮 OwO Farm by Phandat 🐮</h1>
 <p align="center">
-  
+
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
 </p>
@@ -11,7 +10,7 @@
 
 [![Star History Chart](https://api.star-history.com/svg?repos=phandat1405/OwO&type=Date)](https://star-history.com/#phandat1405/OwO&Date)
 
-## 👑・Features
+## 🔮・Features
 
 -   Auto Grind
     -   Auto Hunt
@@ -44,12 +43,23 @@
 }
 ```
 
-## 🔗・Requirements
-Laptop or PC: [Python](https://www.python.org/downloads/)
+## 📡・Usage
+### Pc or Laptop 💻
+Download and install [Python](https://www.python.org/downloads)
+go to cmd file and type:
+```
+pip install -r requirements.txt
+```
+edit config.json or type:
+```
+python setting.py
+```
+start run.cmd or type:
+```
+python main.py
+```
 
-Android: [Terminal](
-
-IOS: Don't support
+[Termux](https://f-droid.org/packages/com.termux)
 
 ### Termux
 pkg update
@@ -62,5 +72,5 @@ pip install -r requirements.txt
 python setting.py
 python main.py
 
-## Demo
+## 🎯・Demo
 ![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
