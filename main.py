@@ -134,15 +134,6 @@ def grind():
 		bot.sendMessage(str(client.channel), "owob")
 		print("{} {}[SENT] owob{}".format(at(), client.color.yellow, client.color.reset))
 		client.grind_amount += 1
-
-#Pray
-def pray():
-	if not client.stopped and client.grind:
-		bot.typingAction(client.channel)
-		bot.sendMessage(str(client.channel), "owopray")
-		print("{} {}[SENT] owopray{}".format(at(), client.color.yellow, client.color.reset))
-		sleep(random.randint(1, 2))
-		client.pray_amount += 1
 		
 #Coinflip
 def coinflip():
