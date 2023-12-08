@@ -1,10 +1,9 @@
-<h1 align="center">OwO Farm Bot</h1>
+<h1 align="center">OwO Farm </h1>
 
 <p align="center">
   
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
-⭐ Give this repository a star for new feature ⭐
 </p>
 
 ## ⭐・Star History
@@ -14,50 +13,43 @@
 
 ## 👑・Features
 
--   Auto Farm
+-   Auto Grind
     -   Auto Hunt
     -   Auto Battle
     -   Auto Say OwO
--   Auto Pray
 -   Auto Gamble
     -   Auto Coinflip
     -   Auto Slot
     -   Custom Bet
     -   Multiply When Lose
--   Captcha(Ban) Protection v0.1.8 (beta)
+-   Captcha Protection
     -   Stop When Captcha Appears
     -   Play Music When Captcha Appears
     -   Notify Via Webhook When Captcha Appears
 
-## ⚙・config.json example
-
+## ⚙・config.json
 ```
 {
   "token": "", your token
   "channel": "", channel id
   "grind": "", true or false
-  "pray": "", true or false
   "coinflip": "", true or false
   "cfbet": "", the coinflip bet you want to start
   "cfrate": "", the coinflip rate you want to multiply
   "slot": "", true or false
   "sbet": "", the slot bet you want to start
   "srate": "", the slot rate you want to multiply
-  "webhook": "", 
-  "ping": ""
+  "webhook": "", the webhook you want to be notified captcha
+  "ping": "", the id user you want to be notified captcha
 }
 ```
 
-
-# Demo
-![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
-
-## Requirement
+## 🔗・Requirements
 Laptop or PC: [Python](https://www.python.org/downloads/)
 
-Android
+Android: [Terminal](
 
-IOS: 
+IOS: Don't support
 
 ### Termux
 pkg update
@@ -69,3 +61,6 @@ cd OwO
 pip install -r requirements.txt
 python setting.py
 python main.py
+
+## Demo
+![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
