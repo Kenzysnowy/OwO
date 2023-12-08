@@ -5,6 +5,8 @@
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
 </p>
 
+🤖 [Support Server](https://discord.gg/KNYphawBHN) 🤖
+
 [⭐・Star History](#star-history)<br>
 [🔮・Features](#features)<br>
 [⚙・Config.json](#configjson)<br>
