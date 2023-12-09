@@ -97,7 +97,7 @@ pip install -r requirements.txt
 python setting.py
 ```
 ```
-python main.py
+python termux.py
 ```
 
 ## 🎯・Demo
