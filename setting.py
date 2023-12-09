@@ -3,18 +3,6 @@ from data import data
 from os import  system
 client = data()
 
-#[1] Token
-#[2] Channel
-#[3] Grind
-#[4] Coinflip
-#[5] Coinflip Bet
-#[6] Coinflip Rate
-#[7] Slot
-#[8] Slot bet
-#[9] Slot Rate
-#[10] Webhook
-#[11] Ping
-
 #Settings
 def main():
 	with open("config.json", "r") as f:
@@ -32,7 +20,8 @@ def main():
 [8] Slot bet
 [9] Slot Rate
 [10] Webhook
-[11] Ping{}""".format(client.color.blue, client.color.reset, client.color.purple, client.color.reset))
+[11] Link
+[12] Ping{}""".format(client.color.blue, client.color.reset, client.color.purple, client.color.reset))
 	choice = input("{}Enter Your Choice: {}".format(client.color.yellow, client.color.reset))
 	if choice == "0":
 		pass
@@ -57,6 +46,8 @@ def main():
 	elif choice == "10":
 		webhook(data, False)
 	elif choice == "11":
+		link(data, False)
+	elif choice == "12":
 		ping(data, False)
 	else:
 		print("{}[INFO] Invalid!{}".format(client.color.red, client.color.reset))
@@ -155,8 +146,20 @@ def srate(data, all):
 		main()
 
 #Webhook
-def webhook(data, all):
-	data['webhook'] = input("{}Enter Webhook Link: {}".format(client.color.blue, client.color.reset))
+def Webhook(data, all):
+	data['webhook'] = input("{}Toggle Webhook (YES/NO): {}".format(client.color.blue, client.color.reset))
+	data['webhook'] = data['webhook'].lower() == "yes"
+	file = open("config.json", "w")
+	dump(data, file, indent = 4)
+	file.close()
+	print("{}[INFO] Saved!{}".format(client.color.green, client.color.reset))
+	if not all:
+		main()
+
+
+#Link
+def link(data, all):
+	data['link'] = input("{}Enter Webhook Link: {}".format(client.color.blue, client.color.reset))
 	file = open("config.json", "w")
 	dump(data, file, indent = 4)
 	file.close()
