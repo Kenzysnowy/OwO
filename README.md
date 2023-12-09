@@ -1,4 +1,4 @@
-<h1 align="center">🐮 OwO Farm Bot 🐮</h1>
+![image](https://github.com/phandat1405/OwO/assets/141330032/8d732b68-573d-4c01-9618-036af116bad5)<h1 align="center">🐮 OwO Farm Bot 🐮</h1>
 <p align="center">
 
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
@@ -106,4 +106,5 @@ python termux.py
 No support
 
 ## 🎯・Demo
-![Preview](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
+![Preview1](https://media.discordapp.net/attachments/1155833237025869876/1180791532165546065/image.png?ex=657eb4cf&is=656c3fcf&hm=b13f263c6947161d214bdf69658604321ade752415641c462346c66e0c0f1013&=&format=webp&quality=lossless)
+![Preview2](https://media.discordapp.net/attachments/1054949701255970836/1182987667412107264/image0.jpg?ex=6586b21e&is=65743d1e&hm=2bdecfb87166992a2bca51be860967f81ed0bed78767f02c6fd081d7b7500dd8&=&format=webp&width=185&height=397)
