@@ -46,7 +46,8 @@
   "slot": "", true or false
   "sbet": "", the slot bet you want to start
   "srate": "", the slot rate you want to multiply
-  "webhook": "", the webhook you want to be notified captcha
+  "webhook": "", true or false
+  "link": "", the webhook link you want to be notified captcha
   "ping": "", the id user you want to be notified captcha
 }
 ```
