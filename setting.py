@@ -146,7 +146,7 @@ def srate(data, all):
 		main()
 
 #Webhook
-def Webhook(data, all):
+def webhook(data, all):
 	data['webhook'] = input("{}Toggle Webhook (YES/NO): {}".format(client.color.blue, client.color.reset))
 	data['webhook'] = data['webhook'].lower() == "yes"
 	file = open("config.json", "w")
