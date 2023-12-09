@@ -8,6 +8,7 @@
   "slot": true,
   "sbet": "3",
   "srate": "2",
-  "webhook": "none",
+  "webhook": false,
+  "link": "none",
   "ping": "none"
 }
