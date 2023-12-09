@@ -69,7 +69,7 @@ Start `run.cmd` or type:
 python main.py
 ```
 
-### Termux 📱
+### Android 📱
 Download and install [Termux](https://f-droid.org/packages/com.termux)
 Open termux app and type:
 
