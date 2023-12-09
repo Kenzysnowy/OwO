@@ -102,7 +102,7 @@ python setting.py
 python termux.py
 ```
 
-###IOS 💾
+### IOS 💾
 No support
 
 ## 🎯・Demo
