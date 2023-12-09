@@ -13,6 +13,7 @@ class data:
 			self.sbet = int(data["sbet"])
 			self.srate = int(data["srate"])
 			self.webhook = data["webhook"]
+			self.link = data["link"]
 			self.ping = data["ping"]
 			self.side = ["h","t"]
 			self.stopped = False
