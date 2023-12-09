@@ -189,4 +189,4 @@ def exit():
 	input("{}Enter 3 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 2 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 1 Times to Restart{}".format(client.color.blue, client.color.reset))
-	system('python "main.py"')
+	system('python "termux.py"')
