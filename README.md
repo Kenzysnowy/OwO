@@ -5,8 +5,9 @@
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
 </p>
 
-💳 [Donating doesn't cost money](https://link1s.com/Phandat) 💳
 🤖 [Support Server](https://discord.gg/KNYphawBHN) 🤖
+
+💳 [Donating doesn't cost money](https://link1s.com/Phandat) 💳
 
 [⭐・Star History](#star-history)<br>
 [🔮・Features](#features)<br>
