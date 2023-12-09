@@ -5,7 +5,7 @@ import time
 from time import sleep, strftime, localtime, time
 import random
 import atexit
-from os import  system
+from os import  system, startfile
 from tabulate import tabulate
 import discum
 from discord_webhook import DiscordWebhook
@@ -174,7 +174,7 @@ bot.gateway.run()
 #Exit
 @atexit.register
 def exit():
-	os.startfile('music.mp3')
+	startfile('music.mp3')
 	client.stopped = True
 	stat = [['🐮', 'AMOUNT','STATUS'],
 	['🎯', (client.grind_amount), (client.grind_status)],
