@@ -36,10 +36,9 @@ def on_ready(resp):
 		print("{}Logged in as{} {}".format(client.color.red, client.color.reset, user['username']))
 
 #Webhook
-def webhookPing(message: str) -> None:
-	if client.webhook:
-		webhook = DiscordWebhook(url = client.webhook, content=message)
-		webhook = webhook.execute()
+def webhook(message: str) -> None:
+	webhook = DiscordWebhook(url = client.link, content=message)
+	webhook = webhook.execute()
 
 #Captcha Bypass
 @bot.gateway.command
@@ -158,17 +157,17 @@ def slot():
 
 #Run
 @bot.gateway.command
-def loop(resp):
+def run(resp):
 	if resp.event.ready:
-		while True:
-			if client.stopped:
-				bot.gateway.close()
-			if not client.stopped:
-						grind()
-						sleep(random.randint(3, 5))
-						coinflip()
-						slot()
-						sleep(random.randint(10, 15))
+		while client.stopped == False:
+			if resp.event.ready:
+				grind()
+				sleep(random.randint(3, 5))
+				coinflip()
+				slot()
+				sleep(random.randint(10, 15))
+	if client.stopped:
+		bot.gateway.close()
 bot.gateway.run()
 
 #Exit
@@ -178,12 +177,15 @@ def exit():
 	stat = [['🐮', 'AMOUNT','STATUS'],
 	['🎯', (client.grind_amount), (client.grind_status)],
 	['💵', (client.benefit_amount), (client.benefit_status)],]
-	webhookPing(f"**<a:Bar:1065047410809770014> chà có sự cố ở <#{client.channel}> <@{client.ping}> kìa <a:PepeHack:1065047722199089222>**")
 	print("{}█▀▀ ▄▀█ █▀█ ▀█▀ █▀▀ █ █ ▄▀█{}".format(client.color.red, client.color.reset))
 	print("{}█▄▄ █▀█ █▀▀  █  █▄▄ █▀█ █▀█{}".format(client.color.red, client.color.reset))
 	print()
 	print(tabulate(stat, headers="firstrow", tablefmt="simple"))
 	print()
+	if client.webhook == True:
+		webhook(f"**<a:Bar:1065047410809770014> chà có sự cố ở <#{client.channel}> <@{client.ping}> kìa <a:PepeHack:1065047722199089222>**")
+		webhook(f"**<a:Bar:1065047410809770014> chà có sự cố ở <#{client.channel}> <@{client.ping}> kìa <a:PepeHack:1065047722199089222>**")
+		webhook(f"**<a:Bar:1065047410809770014> chà có sự cố ở <#{client.channel}> <@{client.ping}> kìa <a:PepeHack:1065047722199089222>**")
 	input("{}Enter 3 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 2 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 1 Times to Restart{}".format(client.color.blue, client.color.reset))
