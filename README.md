@@ -74,13 +74,23 @@ Open termux app and type:
 
 ```
 pkg update
+```
+```
 pkg upgrade
+```
+```
 pkg install git
+```
+```
 pkg install python
 ```
 ```
 git clone https://github.com/phandat1405/OwO.git
+```
+```
 cd OwO
+```
+```
 pip install -r requirements.txt
 ```
 ```
