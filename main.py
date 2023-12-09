@@ -159,8 +159,7 @@ def slot():
 @bot.gateway.command
 def run(resp):
 	if resp.event.ready:
-		while client.stopped == False:
-			if resp.event.ready:
+		while not client.stopped and resp.event.ready:
 				grind()
 				sleep(random.randint(3, 5))
 				coinflip()
@@ -168,7 +167,7 @@ def run(resp):
 				sleep(random.randint(10, 15))
 	if client.stopped:
 		bot.gateway.close()
-bot.gateway.run()
+bot.gateway.run(auto_reconnect=True)
 
 #Exit
 @atexit.register
