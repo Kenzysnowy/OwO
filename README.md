@@ -1,10 +1,11 @@
-![image](https://github.com/phandat1405/OwO/assets/141330032/8d732b68-573d-4c01-9618-036af116bad5)<h1 align="center">🐮 OwO Farm Bot 🐮</h1>
+<h1 align="center">🐮 OwO Farm Bot 🐮</h1>
 <p align="center">
 
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
 <a href="https://github.com/phandat1405/OwO"><img src="https://img.shields.io/github/last-commit/phandat1405/OwO" /></a><br>
 </p>
 
+💳 [Donating doesn't cost money](https://link1s.com/Phandat) 💳
 🤖 [Support Server](https://discord.gg/KNYphawBHN) 🤖
 
 [⭐・Star History](#star-history)<br>
