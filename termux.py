@@ -158,14 +158,13 @@ def slot():
 #Run
 @bot.gateway.command
 def run(resp):
-	if resp.event.ready:
-		while not client.stopped and resp.event.ready:
+	while not client.stopped and resp.event.ready:
 				grind()
 				sleep(random.randint(3, 5))
 				coinflip()
 				slot()
 				sleep(random.randint(10, 15))
-	if client.stopped:
+	if client.stopped and not resp.event.ready:
 		bot.gateway.close()
 bot.gateway.run(auto_reconnect=True)
 
@@ -188,4 +187,4 @@ def exit():
 	input("{}Enter 3 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 2 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 1 Times to Restart{}".format(client.color.blue, client.color.reset))
-	system('python "termux.py"')
+	system('python "main.py"')
