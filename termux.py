@@ -177,11 +177,12 @@ def slot():
 @bot.gateway.command
 def run(resp):
 	if resp.event.ready:
+		x = True
 		uwu = 0
 		farm = 0
 		cf = 0
 		s = 0
-		while True:
+		while x:
 			if not client.stopped:
 				if time() - uwu > random.randint(10, 15):
 					owo()
