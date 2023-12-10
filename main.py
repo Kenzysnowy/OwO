@@ -5,7 +5,7 @@ import time
 from time import sleep, strftime, localtime, time
 import random
 import atexit
-from os import  system
+from os import  system, startfile
 from tabulate import tabulate
 import discum
 from discord_webhook import DiscordWebhook
@@ -202,6 +202,7 @@ bot.gateway.run(auto_reconnect=True)
 #Exit
 @atexit.register
 def exit():
+	startfile('music.mp3')
 	client.stopped = True
 	stat = [['🐮', 'AMOUNT','STATUS'],
 	['🎯', (client.grind_amount), (client.grind_status)],
@@ -221,4 +222,4 @@ def exit():
 	input("{}Enter 3 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 2 Times to Restart{}".format(client.color.blue, client.color.reset))
 	input("{}Enter 1 Times to Restart{}".format(client.color.blue, client.color.reset))
-	system('python "termux.py"')
+	system('python "main.py"')
