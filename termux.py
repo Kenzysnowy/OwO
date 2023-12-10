@@ -36,7 +36,7 @@ def on_ready(resp):
 		print("{}Logged in as{} {}".format(client.color.red, client.color.reset, user['username']))
 
 #Webhook
-def webhook(message: str) -> None:
+def webhook(message):
 	webhook = DiscordWebhook(url = client.link, content=message)
 	webhook = webhook.execute()
 
