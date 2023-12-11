@@ -1,4 +1,4 @@
-<h1 align="center">🐮 OwO Farm Bot 🐮</h1>
+<h1 align="center">🐮 STOP USING, I'M FIXING 🐮</h1>
 <p align="center">
 
 <a href="https://github.com/phandat1405/OwO"><img src="https://hits.sh/github.com/phandat1405/OwO.svg?view=today-total&label=Repo%20Today/Total%20Views&color=770ca1&labelColor=007ec6"/></a>
