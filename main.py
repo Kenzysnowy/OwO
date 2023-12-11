@@ -133,16 +133,13 @@ def scheck(resp):
 			except KeyError:
 				pass
 
-#OwO
-def owo():
-	if not client.stopped:
+#grind
+def grind():
+	if not client.stopped and client.grind:
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo")
 		print("{} {}[SENT] owo{}".format(at(), client.color.yellow, client.color.reset))
-
-#Grind
-def grind():
-	if not client.stopped and client.grind:
+		sleep(random.randint(1, 2))
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owoh")
 		print("{} {}[SENT] owoh{}".format(at(), client.color.yellow, client.color.reset))
@@ -152,8 +149,8 @@ def grind():
 		print("{} {}[SENT] owob{}".format(at(), client.color.yellow, client.color.reset))
 		client.grind_amount += 1
 		
-#Coinflip
-def coinflip():
+#coinflip
+def cf():
 	if client.current_cfbet  > 250000:
 		client.current_cfbet = client.cfbet
 	if not client.stopped and client.coinflip:
@@ -161,42 +158,33 @@ def coinflip():
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo cf {} {}".format(client.current_cfbet, choice))
 		print("{} {}[SENT] owo cf {} {}{}".format(at(), client.color.yellow, client.current_cfbet, choice, client.color.reset))
+		sleep(random.randint(1, 2))
 
-#Slot
-def slot():
+#slot
+def s():
 	if client.current_sbet  > 250000:
 		client.current_sbet = client.sbet
 	if not client.stopped and client.slot:
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo s {}".format(client.current_sbet))
-		print("{} {}[SENT] owo s {}{}".format(at(), client.color.yellow,client.current_sbet, client.color.reset))
+		print("{} {}[SENT] owo s {}{}".format(at(), client.color.yellow,client.current_sbet,client.color.reset))
+		sleep(random.randint(1, 2))
 
-#Run
+#run
 @bot.gateway.command
 def run(resp):
 	if resp.event.ready:
 		x = True
-		uwu = 0
-		farm = 0
-		cf = 0
-		s = 0
 		while x:
-			if not client.stopped:
-				if time() - uwu > random.randint(10, 20):
-					owo()
-					uwu = time()
-				if time() - farm > random.randint(15, 30):
-					grind()
-					farm = time()
-				if time() - cf > random.randint(15, 30):
-					coinflip()
-					cf = time()
-				if time() - s > random.randint(15, 30):
-					slot()
-					s = time()
 			if client.stopped:
 				bot.gateway.close()
-bot.gateway.run(auto_reconnect=True)
+			if not client.stopped:
+				grind()
+				sleep(random.randint(3, 5))
+				cf()
+				s()
+				sleep(random.randint(10, 15))
+bot.gateway.run()
 
 #Exit
 @atexit.register
