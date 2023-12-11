@@ -11,7 +11,7 @@
 
 [⭐・Star History](#star-history)<br>
 [🔮・Features](#features)<br>
-[⚙・Config.json](#configjson)<br>
+[⚙・Config](#configjson)<br>
 [📡・Usage](#usage)<br>
 [🎯・Demo](#demo)<br>
 
@@ -36,7 +36,7 @@
     -   Play Music When Captcha Appears
     -   Notify Via Webhook When Captcha Appears
 
-## ⚙・config.json
+## ⚙・config
 ```
 {
   "token": "", your token
