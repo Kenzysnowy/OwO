@@ -161,7 +161,6 @@ def coinflip():
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo cf {} {}".format(client.current_cfbet, choice))
 		print("{} {}[SENT] owo cf {} {}{}".format(at(), client.color.yellow, client.current_cfbet, choice, client.color.reset))
-		sleep(random.randint(1, 2))
 
 #Slot
 def slot():
@@ -171,7 +170,6 @@ def slot():
 		bot.typingAction(client.channel)
 		bot.sendMessage(str(client.channel), "owo s {}".format(client.current_sbet))
 		print("{} {}[SENT] owo s {}{}".format(at(), client.color.yellow,client.current_sbet, client.color.reset))
-		sleep(random.randint(1, 2))
 
 #Run
 @bot.gateway.command
@@ -184,16 +182,16 @@ def run(resp):
 		s = 0
 		while x:
 			if not client.stopped:
-				if time() - uwu > random.randint(10, 15):
+				if time() - uwu > random.randint(10, 20):
 					owo()
 					uwu = time()
-				if time() - farm > random.randint(15, 20):
+				if time() - farm > random.randint(15, 30):
 					grind()
 					farm = time()
-				if time() - cf > random.randint(15, 20):
+				if time() - cf > random.randint(15, 30):
 					coinflip()
 					cf = time()
-				if time() - s > random.randint(15, 20):
+				if time() - s > random.randint(15, 30):
 					slot()
 					s = time()
 			if client.stopped:
